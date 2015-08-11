@@ -1,0 +1,7 @@
+.bundle
+/build
+/.sass-cache
+/.cache
+.rakeTasks
+Gemfile.lock
+*.iml

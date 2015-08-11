@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
+body {
+	padding-top: $navbar-height + 20px;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding-top: 3*$navbar-height + 20px;
+	}
+}
+
+header {
+	.avatar {
+		background-color: $secondary-bg;
+		border-radius: 105px;
+		padding: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		margin-top: 100px;
+		margin-bottom: 150px;
+	}
+}
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	.navbar-nav {
+		letter-spacing: 1px;
+	}
+}
+
+section {
+	margin-bottom: 100px;
+}
+
+#projects {
+	.project-container {
+		height: 200px;
+
+		.project {
+			height: 100%;
+			width: 100%;
+			border: 1px solid $text-color;
+			border-radius: 10px;
+
+			img, i.fa-search-plus {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+
+			i.fa-search-plus {
+				z-index: 2;
+				opacity: 0;
+				transition: all ease 0.5s;
+				-webkit-transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+}
+
+#conferences {
+	ul {
+		list-style-type: none;
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	.location {
+		font-size: 0.75em;
+	}
+
+	.links a {
+		margin-left: 10px;
+	}
+}

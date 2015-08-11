@@ -1,0 +1,7 @@
+task :build do
+	system 'middleman build'
+end
+
+task deploy: :build do
+	system 'rsync -axPv build/ server:www/'
+end
