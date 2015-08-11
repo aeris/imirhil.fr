@@ -1,5 +1,7 @@
+task default: :deploy
+
 task :build do
-	system 'middleman build'
+	system 'bundle exec middleman build'
 end
 
 task deploy: :build do

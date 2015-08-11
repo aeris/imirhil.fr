@@ -1,13 +1,288 @@
-@import 'font-awesome';
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/icons";
+
+@import 'mixins';
 @import 'theme';
 
-@import 'bootstrap/variables';
-@import 'bootstrap/mixins';
-@import 'bootstrap/normalize';
-@import 'bootstrap/scaffolding';
-@import 'bootstrap/type';
-@import 'bootstrap/grid';
-@import 'bootstrap/forms';
-@import 'bootstrap/navs';
-@import 'bootstrap/navbar';
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
 
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: $primary-bg;
+	color: $text-color;
+	font-size: $font-size-base;
+	padding-top: $navbar-height + 10px;
+
+	width: 100%;
+	margin: auto;
+
+	padding-bottom: 100px;
+}
+
+h1, h2 {
+	margin: 0px;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: underline;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+header {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: $navbar-height;
+
+	background-color: $navbar-bg;
+	color: $navbar-color;
+
+	font-weight: bold;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	a {
+		color: $navbar-link-color;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $navbar-link-color-hover;
+		}
+	}
+
+	nav {
+		width: 100%;
+
+		div {
+			text-align: right;
+
+			a {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+span.anchor {
+	display: block;
+	//height: $navbar-height;
+	//margin-top: -$navbar-height;
+	visibility: hidden;
+}
+
+section {
+	h1 {
+		text-align: center;
+		font-size: 2em;
+	}
+}
+
+section.identity {
+	text-align: center;
+
+	img {
+		margin: auto;
+		background-color: $secondary-bg;
+
+		&.big {
+			padding: 10px;
+			border-radius: 105px;
+			-moz-border-radius: 105px;
+			-webkit-border-radius: 105px;
+		}
+
+		&.small {
+			padding: 4px;
+			border-radius: 52px;
+			-moz-border-radius: 52px;
+			-webkit-border-radius: 52px;
+		}
+	}
+
+	h1 {
+		font-size: 3em;
+		margin: 20px 0;
+	}
+
+	p {
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: $screen-xs) {
+	header {
+		height: $navbar-height / 2;
+
+		nav {
+			font-size: 10px;
+		}
+	}
+
+	span.anchor {
+		height: $navbar-height;
+		margin-top: -$navbar-height;
+	}
+
+	section.identity {
+		img.big {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: $screen-xs) {
+	section {
+		margin-top: 100px;
+
+		&.identity {
+			img.small {
+				display: none;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: $body-width) {
+	nav {
+		padding-right: 10px;
+	}
+}
+
+@media (min-width: $body-width) {
+	body, nav {
+		max-width: $body-width;
+	}
+
+	header {
+		width: 100%;
+
+		div {
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
+
+section.projects {
+	.projects {
+		.project {
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #fff;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+	}
+}
+
+@media (min-width: $screen-sm) {
+	section.projects {
+		.projects {
+			display: -webkit-flex;
+			display: flex;
+			width: 100%;
+			-webkit-align-items: stretch;
+			align-items: stretch;
+
+			.project {
+				-webkit-flex: 1;
+				flex: 1;
+			}
+		}
+	}
+}
+
+section.conferences {
+	ul {
+		list-style: none;
+
+		li {
+			margin-top: 10px;
+		}
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	.location {
+		font-size: 0.8em;
+	}
+
+	.links a {
+		margin-left: 10px;
+	}
+}
+
+section.contact {
+	div:not([class = 'nb']) {
+		margin-top: 10px;
+
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+
+		span {
+			&.title {
+				-webkit-flex: 1;
+				flex: 1;
+
+				text-align: right;
+				font-weight: bold;
+				padding-right: 10px;
+			}
+
+			&.content {
+				-webkit-flex: 3;
+				flex: 3;
+			}
+		}
+	}
+}
+
+footer {
+	font-size: 0.75em;
+
+	p {
+		margin-top: 5px;
+	}
+}

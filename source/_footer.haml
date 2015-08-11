@@ -1,0 +1,22 @@
+%footer
+	%p
+		La plupart de mes sites utilise
+		%a{href: 'http://www.cacert.org/'} CACert
+		comme autoritée de certification pour mes certificats TLS.
+	%p
+		Ces sites étant aussi protégés par
+		= succeed ',' do
+			%a{href: 'https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security'} HSTS
+		vous aurez donc sûrement besoin d’installer
+		%a{href: 'http://www.cacert.org/index.php?id=3'} leurs certificats
+		pour pouvoir y accéder.
+	%p
+		Pour vous assurez de la validité des certificats utilisés, ils sont aussi protégés par
+		= succeed ',' do
+			%a{href: 'https://fr.wikipedia.org/wiki/Domain_Name_System_Security_Extensions'} DNSSec
+		= succeed ',' do
+			%a{href: 'https://fr.wikipedia.org/wiki/DNS_-_based_Authentication_of_Named_Entities'} DANE/TLSA
+		et
+		= succeed '.' do
+			%a{href: 'https://fr.wikipedia.org/wiki/HTTP_Public_Key_Pinning'} HPKP
+
