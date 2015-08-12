@@ -5,5 +5,5 @@ task :build do
 end
 
 task deploy: :build do
-	system 'rsync -axPv build/ server:www/'
+	system 'rsync -axPv build/ server:www/ --exclude "glyphicons-*"'
 end
