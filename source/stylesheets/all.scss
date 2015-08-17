@@ -91,6 +91,10 @@ span.anchor {
 	visibility: hidden;
 }
 
+span.small {
+	font-size: 0.8em;
+}
+
 section {
 	h1 {
 		text-align: center;
@@ -225,7 +229,8 @@ section.projects {
 	}
 }
 
-section.conferences {
+section.conferences,
+section.interviews {
 	ul {
 		list-style: none;
 
