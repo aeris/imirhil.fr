@@ -1,5 +1,9 @@
 task default: :deploy
 
+task :optipng do
+	system 'find source/images -name "*.png" | xargs optipng -o7 -zm1-9 -f5 -strip all'
+end
+
 task :build do
 	system 'bundle exec middleman build'
 end
