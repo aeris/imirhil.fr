@@ -30,11 +30,9 @@ h1, h2 {
 
 a {
 	color: $link-color;
-	text-decoration: none;
 
 	&:hover {
 		color: $link-color-hover;
-		text-decoration: underline;
 	}
 }
 
@@ -65,9 +63,11 @@ header {
 	a {
 		color: $navbar-link-color;
 		text-transform: uppercase;
+		text-decoration: none;
 
 		&:hover {
 			color: $navbar-link-color-hover;
+			text-decoration: underline;
 		}
 	}
 
@@ -86,8 +86,6 @@ header {
 
 span.anchor {
 	display: block;
-	//height: $navbar-height;
-	//margin-top: -$navbar-height;
 	visibility: hidden;
 }
 
@@ -208,6 +206,18 @@ section.projects {
 			align-items: center;
 			-webkit-justify-content: center;
 			justify-content: center;
+
+			text-align: justify;
+		}
+
+		img {
+			&.left {
+				margin-right: 10px;
+			}
+
+			&.right {
+				margin-left: 10px;
+			}
 		}
 	}
 }

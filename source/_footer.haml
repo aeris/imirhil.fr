@@ -11,7 +11,7 @@
 	-#	%a{href: 'http://www.cacert.org/index.php?id=3'} leurs certificats
 	-#	pour pouvoir y accéder.
 	%p
-		Pour vous assurer de la validité des TLS certificats utilisés par mes sites, ils sont protégés par
+		Pour vous assurer de la validité des TLS certificats utilisés sur mes sites, ils sont protégés par
 		= succeed ',' do
 			%a{href: 'https://fr.wikipedia.org/wiki/Domain_Name_System_Security_Extensions'} DNSSec
 		= succeed ',' do
@@ -19,4 +19,31 @@
 		et
 		= succeed '.' do
 			%a{href: 'https://fr.wikipedia.org/wiki/HTTP_Public_Key_Pinning'} HPKP
+
+	%p
+		Empreinte de la clef publique des certificats pour *.imirhil.fr :
+		%ul
+			%li
+				SHA512 :
+				%pre
+					%code
+						:preserve
+							16AC C404 19CE F989 84BF 7F1B CE35 4BB0 AA3F 84AB 0029 E829 F36C D3BB E36E D250
+							1B6F 22D4 EC87 9B31 5FA0 93E0 F73C 6E7A 85FA 8375 82FF 41F6 85C5 3E49 1134 1451
+			%li
+				SHA256 :
+				%pre
+					%code
+						:preserve
+							C1D9 03DF C890 433C 44EE 0D11 A663 7C56 8688 A97E D898 F5B0 A2E7 83F4 8A9A C1F8
+			%li
+				SHA1 :
+				%pre
+					%code
+						:preserve
+							156C B0B7 7914 5311 D3E8 00C8 EAF6 5F4D 5CFF B14B
+
+	%p
+		Ce site est aussi disponible dans le grand méchant darknet :
+		%a{href: 'http://aeriszyr4wbpvuo2.onion/'} http://aeriszyr4wbpvuo2.onion/
 

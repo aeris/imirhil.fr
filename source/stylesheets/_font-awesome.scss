@@ -28,8 +28,11 @@ $fa-li-width: (30em / 14) !default;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.#{$fa-css-prefix}-slideshare:before { content: '\f1e7'; }
-.#{$fa-css-prefix}-video-camera:before { content: '\f03d'; }
+.#{$fa-css-prefix}-slides:before { content: '\f1e7'; }
+.#{$fa-css-prefix}-video:before { content: '\f03d'; }
 .#{$fa-css-prefix}-external-link:before { content: '\f08e'; }
 .#{$fa-css-prefix}-newspaper:before { content: '\f1ea'; }
-.#{$fa-css-prefix}-warning:before { content: '\f071'; }
+.#{$fa-css-prefix}-warning {
+	color: #f0ad4e;
+	&:before { content: '\f071'; }
+}
